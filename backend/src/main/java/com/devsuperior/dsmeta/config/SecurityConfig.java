@@ -22,8 +22,8 @@ public class SecurityConfig {
 		http.headers().frameOptions().disable();
 		http.cors().and().csrf().disable();
 		http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
-		http.authorizeHttpRequests((auth) -> auth.anyRequest().permitAll());
-
+		http.authorizeHttpRequests((auth) -> auth.anyRequest().permitAll()); 
+		//permitir acesso
 		return http.build();
 	}
 
